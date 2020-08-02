@@ -1,6 +1,5 @@
 import React from 'react';
 // import {StyleSheet} from 'react-native';
-import NavigatorStack from './src/Navigation/StackNavigator/NavigatorStack';
 import {AppProvider} from './src/context/context';
 import DrawerNavigation from './src/Navigation/DrawerNavigation/NavigationDrawer';
 const App = () => (
