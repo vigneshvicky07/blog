@@ -3,7 +3,7 @@ import {View, Text, ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 export default function ImageDetails(props) {
-  console.log('hai', typeof props.Data);
+  console.log('hai', props.Data);
   return (
     <View>
       <ScrollView>

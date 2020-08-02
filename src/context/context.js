@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-const AppContext = React.createContext();
+export const AppContext = React.createContext();
+
 export const AppProvider = ({children}) => {
   const [Dress, setDress] = useState([
     {
@@ -10,6 +11,7 @@ export const AppProvider = ({children}) => {
     },
   ]);
   const addDress = (Value) => {
+    console.log('-------------------------->', Value);
     setDress([...Dress, {title: Value}]);
   };
   return (
@@ -18,5 +20,3 @@ export const AppProvider = ({children}) => {
     </AppContext.Provider>
   );
 };
-
-export default AppContext;

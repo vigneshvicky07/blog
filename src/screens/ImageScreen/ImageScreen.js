@@ -7,12 +7,12 @@ import {
   TextInput,
   Button,
 } from 'react-native';
-import {AppProvider} from '../../context/context';
+import {AppContext} from '../../context/context';
 
 import ImageDetails from './ImageDetails';
 export default function ImageScreen() {
   const [Value, setValue] = useState('');
-  const {Dress, addDress} = useContext(AppProvider);
+  const {Dress, addDress} = useContext(AppContext);
   const renderItem = ({item}) => {
     return (
       <View style={style.container}>
@@ -20,7 +20,6 @@ export default function ImageScreen() {
       </View>
     );
   };
-  console.log('dress', AppProvider[Function]);
 
   return (
     <View>
@@ -28,11 +27,9 @@ export default function ImageScreen() {
 
       <TextInput
         value={Value}
-        // autoCapitalize = {true}
         onChangeText={(NewValue) => setValue(NewValue)}
       />
-      {/* <Text>{Value}</Text> */}
-      <Button title="Add Me" onPress={addDress} />
+      <Button title="Add Me" onPress={() => addDress(Value)} />
       <FlatList
         style={style.container}
         data={Dress}
