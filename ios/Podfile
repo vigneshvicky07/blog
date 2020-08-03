@@ -12,6 +12,8 @@ target 'myblog1' do
 
   pod 'react-native-maps', :path => '../node_modules/react-native-maps'
 
+  pod 'react-native-fingerprint-scanner', :path => '../node_modules/react-native-fingerprint-scanner'
+
   target 'myblog1Tests' do
     inherit! :complete
     # Pods for testing
